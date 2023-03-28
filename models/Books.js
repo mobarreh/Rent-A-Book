@@ -19,6 +19,10 @@ Books.init(
         type: DataTypes.DECIMAL(10, 2),
         allowNull: false,
     },
+    filename: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    }
     user_id: {
         type: DataTypes.INTEGER,
         reference: {
