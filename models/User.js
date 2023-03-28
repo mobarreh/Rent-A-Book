@@ -44,6 +44,6 @@ User.init({
     freezeTableName: true,
     underscored: true,
     modelName: 'user',
-});
+}});
 
-module.exports=User
+module.exports= User;
