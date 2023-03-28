@@ -1,5 +1,5 @@
 {
-  "name": "sequelize",
+  "name": "Rent A Book",
   "version": "1.0.0",
   "description": "A book rental site that allows user to navigate a database of books and rent out available books",
   "main": "server.js",
@@ -12,12 +12,5 @@
     "url": "hhtps://github.com/shtuupid/Rent-A-Book"
   },
   "author": "Mohamed Barreh and Junaid Siddique",
-  "license": "ISC",
-  "dependencies": {
-    "dotenv": "^16.0.3",
-    "express": "^4.18.2",
-    "express-handlebars": "^7.0.4",
-    "express-session": "^1.17.3",
-    "sequelize": "^6.30.0"
-  }
+  "license": "MIT"
 }
