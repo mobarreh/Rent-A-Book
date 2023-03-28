@@ -27,7 +27,7 @@ Books.init(
         type: DataTypes.INTEGER,
         reference: {
             model: "user",
-            key: "id", // user table id FK
+            key: "id", 
         },
     },
 },
