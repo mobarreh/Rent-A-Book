@@ -1,4 +1,4 @@
-const { books } = require('../models');
+const { Books } = require('../models');
 
 const booksData = [
   {

@@ -1,9 +1,9 @@
 const User = require('./User');
-const books = require('./books');
+const Books = require('./Books');
 
-books.hasOne(User,
+Books.hasOne(User,
     {
         foreignKey: 'user_id',
     });
 
-module.exports = { User, books};
+module.exports = { User, Books};
