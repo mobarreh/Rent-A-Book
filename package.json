@@ -1,5 +1,5 @@
 {
-  "name": "Rent A Book",
+  "name": "rent-a-book",
   "version": "1.0.0",
   "description": "A book rental site that allows user to navigate a database of books and rent out available books",
   "main": "server.js",
