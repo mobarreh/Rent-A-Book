@@ -5,13 +5,9 @@ const withAuth = require('../utils/auth');
 router.get("/", async (req, res) => {
   try {
     const dbBooksData = await Books.findAll({
-      include: [
-        {
-          model: Books,
-          attributes: ['filename', 'book_name'],
-        },
-      ],
+      attributes: { include: ['filename', 'book_name'] }
     });
+
     const books = dbBooksData.map((books) =>
       books.get({ plain: true })
     );
@@ -25,7 +21,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get('/books/:id', withAuth, async (req, res) => {
+router.get('/book/:id', withAuth, async (req, res) => {
   try {
     const dbBooksData = await books.findByPk(req.params.id, {
       include: [
