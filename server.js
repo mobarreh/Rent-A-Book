@@ -16,10 +16,7 @@ const PORT = process.env.PORT || 3001;
 const sess = {
     secret: "Rent A Book Secret",
     cookie: {
-        maxAge: 1800,
-        httpOnly: false,
-        secure: false,
-        sameSite: "strict",
+
     },
     resave: false,
     saveUninitialized: true,
