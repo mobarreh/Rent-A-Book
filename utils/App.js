@@ -7,4 +7,4 @@ const App = () => {
     console.log(dateFormatted);
 };
 
-export default App;
+module.export= App;
