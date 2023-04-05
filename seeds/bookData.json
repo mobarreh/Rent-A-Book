@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Harry Potter and the Sorcerers Stone",
+    "description": "An orphaned boy enrolls in a school of wizardry, where he learns the truth about himself, his family and the terrible evil that haunts the magical world.",
+    "price": 14,
+    "filename": "harry-potter-1.png"
+  },
+  {
+    "name": "Harry Potter and the Chamber of Secrets",
+    "description": "Harry's tumultuous second year at Hogwarts School of Witchcraft and Wizardry, including an encounter with Voldemort, the wizard who killed Harry's parents",
+    "price": 11,
+    "filename": "harry-potter-2.png"
+  },
+  {
+    "name": "Harry Potter and the Prisoner of Azkaban",
+    "description": "Harry's 3rd year at Hogwarts. Along with friends Ron and Hermione, Harry investigates the case of Sirius Black, an escaped prisoner from Azkaban, the wizard prison..",
+    "price": 20,
+    "filename": "harry-potter-3.png"
+  },
+  {
+    "name": "Harry Potter and the Goblet of Fire",
+    "description": " Harry Potter, a wizard in his fourth year at Hogwarts School of Witchcraft and Wizardry, and the mystery surrounding the entry of Harry's name into the Triwizard Tournament, in which he is forced to compete.",
+    "price": 22,
+    "filename": "harry-potter-4.png"
+  },
+  {
+    "name": "Harry Potter and the Order of the Phoneix",
+    "description": "Harry Potter and Dumbledore's warning about the return of Lord Voldemort is not heeded by the wizard authorities who, in turn, look to undermine Dumbledore's authority at Hogwarts and discredit Harry.",
+    "price": 11,
+    "filename": "harry-potter-5.png"
+  }
+]
