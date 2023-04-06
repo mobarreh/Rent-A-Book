@@ -39,12 +39,19 @@ router.delete('/:id', withAuth, async (req, res) => {
 router.post("/send", async (req, res) => {
   try {
       const output = `
+      <html>
+      <body>
       <p>You rented out a book</p>
       <h3>Rent-A-Book Receipt</h3>
       <ul>
           </ul>
           <h3>Message</h3>
-          <p>Thank you for renting this book</p>
+          <p>Thank you for renting ${req.body.name}</p>
+          <p><strong>Price: ${req.body.price}</strong></p>
+          <p><strong>Description</strong></p>
+          <p><strong>${req.body.description}</strong></p>
+          </body>
+          </html>
         `;
       const transporter = nodemailer.createTransport({ 
         service : "gmail",
@@ -62,7 +69,7 @@ router.post("/send", async (req, res) => {
         from: 'bookrent21@gmail.com',
         to: 'mohamedbarreh8@gmail.com',
         subject: "Rook Receipt",
-        text: "Thanks for renting with is!",
+        html: output,
       };
   
       transporter.sendMail(mailOptions, function(err, data) {
