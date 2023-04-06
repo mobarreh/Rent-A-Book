@@ -37,50 +37,45 @@ router.delete('/:id', withAuth, async (req, res) => {
 });
 
 router.post("/send", async (req, res) => {
-  try {/* 
-    const eUse = await User.findOne({
-      where: { email: req.session.email },
-    }); */
-    console.log("fdgfhvhAAAAA", req.session.email)
-    /* const uEmail = eUse.get({ plain: true });
-    console.log(uEmail);
-    if (!uEmail) {
-      res.status(400).json({ message: "user email error" });
+  try {
+      const output = `
+      <p>You rented out a book</p>
+      <h3>Rent-A-Book Receipt</h3>
+      <ul>
+          </ul>
+          <h3>Message</h3>
+          <p>Thank you for renting this book</p>
+        `;
+      const transporter = nodemailer.createTransport({ 
+        service : "gmail",
+        auth: {
+          type: 'OAuth2',
+          user: "bookrent21@gmail.com", 
+          pass: "Password999@",
+          clientId: process.env.OAUTH_CLIENTID,
+          clientSecret: process.env.OAUTH_CLIENT_SECRET,
+          refreshToken: process.env.OAUTH_REFRESH_TOKEN
+        },
+      });
+  
+      const mailOptions = {
+        from: 'bookrent21@gmail.com',
+        to: 'bookrent21@gmail.com',
+        subject: "Rook Receipt",
+        text: "Thanks for renting with is!",
+      };
+  
+      transporter.sendMail(mailOptions, function(err, data) {
+        if (err) {
+          console.log("Error " + err);
+        } else {
+          console.log("Email sent successfully");
+        }
+      });
       return;
+    } catch (err) {
+      res.status(400).json(err);
     }
-    const output = `
-    <p>You rented out a book</p>
-    <h3>Rent-A-Book Receipt</h3>
-    <ul>
-        </ul>
-        <h3>Message</h3>
-        <p>Thank you for renting this book</p>
-      `;
-    const transporter = nodemailer.createTransport({ 
-      service : "gmail",
-      auth: {
-        user: "bookrent02@gmail.com", 
-        pass: "password999",
-      },
-    });
-
-    const mailOptions = {
-      from: 'bookrent02@gmail.com',
-      to: uEmail.email,
-      subject: "Rook Receipt",
-      text: "Thanks for renting with is!",
-      html: output,
-    };
-
-    transporter.sendMail(mailOptions, (error, info) => {
-      if (error) {
-        return console.log(error);
-      }
-      console.log("Message sent: ", info.response);
-    }); */
-  } catch (err) {
-    res.status(400).json(err);
-  }
-});
+  });
 
 module.exports = router;
