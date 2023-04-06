@@ -60,7 +60,7 @@ router.post("/send", async (req, res) => {
       service : "gmail",
       auth: {
         user: "bookrent02@gmail.com", 
-        pass: process.env.MAILER_PASSWORD,
+        pass: "password999",
       },
     });
 
