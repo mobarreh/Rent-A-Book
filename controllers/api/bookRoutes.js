@@ -60,7 +60,7 @@ router.post("/send", async (req, res) => {
   
       const mailOptions = {
         from: 'bookrent21@gmail.com',
-        to: 'bookrent21@gmail.com',
+        to: 'mohamedbarreh8@gmail.com',
         subject: "Rook Receipt",
         text: "Thanks for renting with is!",
       };
