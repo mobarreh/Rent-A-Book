@@ -41,9 +41,8 @@ router.post("/send", async (req, res) => {
     const eUse = await User.findOne({
       where: { email: req.session.email },
     }); */
-    console.log("fdgfhvhAAAAA", req.session.email)
-    /* const uEmail = eUse.get({ plain: true });
-    console.log(uEmail);
+    console.log("fdgfhvhAAAAA", req.session)
+    const uEmail = "mjunaid@live.co.uk";   //console.log(uEmail);
     if (!uEmail) {
       res.status(400).json({ message: "user email error" });
       return;
@@ -77,7 +76,7 @@ router.post("/send", async (req, res) => {
         return console.log(error);
       }
       console.log("Message sent: ", info.response);
-    }); */
+    });
   } catch (err) {
     res.status(400).json(err);
   }
