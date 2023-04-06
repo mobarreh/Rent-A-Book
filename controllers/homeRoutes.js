@@ -28,6 +28,7 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/book/:id', async (req, res) => {
+  console.log("getBookById");
   try {
     const bookData = await Book.findByPk(req.params.id, {
       include: [
@@ -37,8 +38,9 @@ router.get('/book/:id', async (req, res) => {
         },
       ],
     });
-
+    console.log("get books success");
     const book = bookData.get({ plain: true });
+    console.log("book = ", book);
 
     res.render('book', {
       ...book,
